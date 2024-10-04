@@ -7,34 +7,35 @@ const __dirname = path.dirname(__filename);
 
 const server = express();
 
-server.use(express.static(path.join(__dirname, 'Public')));
+server.use(express.static("./Public"));
 
 // Define routes for specific pages
 
 server.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname, 'Public', 'index.html'));
+    res.sendFile(path.join(process.cwd(), './Public/index.html'));
 });
 
 server.get("/child", (req, res) => {
-    res.sendFile(path.join(__dirname, 'Public', 'Child.html'));
+    res.sendFile(path.join(process.cwd(), './Public/Child.html'));
 });
 
 server.get("/financial", (req, res) => {
-    res.sendFile(path.join(__dirname, 'Public', 'Financial.html'));
+    res.sendFile(path.join(process.cwd(), './Public/Financial.html'));
 });
 
 server.get("/types", (req, res) => {
-    res.sendFile(path.join(__dirname, 'Public', 'Types.html'));
+    res.sendFile(path.join(process.cwd(), './Public/Types.html'));
 });
 
 server.get("/woman", (req, res) => {
-    res.sendFile(path.join(__dirname, 'Public', 'Woman.html'));
+    res.sendFile(path.join(process.cwd(), './Public/Woman.html'));
 });
 
 // console.clear()
 
 // Start the server
-server.listen(8000, () => console.log("Server is running on http://localhost:8000"));
+const port = 8000
+server.listen(port , () => console.log("Server is running on http://localhost:${port}"));
 
 
 
