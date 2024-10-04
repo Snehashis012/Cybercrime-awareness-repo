@@ -31,6 +31,10 @@ server.get("/woman", (req, res) => {
     res.sendFile(path.join(process.cwd(), './Public/Woman.html'));
 });
 
+server.get("/others", (req, res) => {
+    res.sendFile(path.join(process.cwd(), './Public/Others.html'));
+});
+
 // console.clear()
 
 // Start the server
