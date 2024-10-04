@@ -1,95 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-    h1{
-        color: blue;
-    }
-			#navbar {
-				overflow: hidden;
-				background-color: rgb(34, 85, 202);
-				display: flex;
-				position: fixed; /* Set the navbar to fixed position */
-				top: 0; /* Position the navbar at the top of the page */
-				width: 100%;
-				height: 35px;
-				transition: top 0.3s;
-				justify-content: space-around;
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Homepage</title>
+		<style>
+			body {
+				background-color: black;
+				color: #fff;
+				padding-left: 10px;
+				text-align: justify;
 			}
-			#navbar ul {
-				display: flex;
-				gap: 25px;
-				margin-top: 5px;
+			h1 {
+				text-align: center;
+				color: aqua;
 			}
-			#navbar ul li a:hover {
-				color: rgb(10, 217, 86);
+			#myBtn {
+				text-align: center;
+				background-color: cadetblue;
+				color: rgb(220, 50, 50);
+				padding: 5px;
+				border-radius: 10px;
+				cursor: pointer;
 			}
-			#navbar ul li {
-				list-style: none;
+			#myBtn:hover {
+				background-color: cornflowerblue;
 			}
-			#navbar a {
-				text-decoration: none;
-				color: antiquewhite;
+			
+			.nxtPage{
+				color:aliceblue;
+				margin-top: 50px;
+				text-align: justify;
 			}
-			#navbar b {
-				margin-top: 5px;
-			}
-            
-            h1{
-                text-align:center;
-                color:aqua;
-            }
 		</style>
-		<script>
-			window.onscroll = function () {
-				scrollFunction();
-			};
+	</head>
+	<body>
+		<u> <h1>CYBER CRIME</h1></u>
 
-			function scrollFunction() {
-				if (
-					document.body.scrollTop > 10 ||
-					document.documentElement.scrollTop > 20
-				) {
-					document.getElementById('navbar').style.top = '0';
+		<!-- This is for fun-->
+
+		<marquee behavior="" direction="right" scrollamount="20"><h2>&#9760; Hackers around you!! &#9760;</h2></marquee>
+
+		<p>
+			The digital age, while bringing unparalleled convenience and connectivity,
+			has also seen a parallel and alarming rise in cybercrime.
+			<span id="dots">...</span
+			><span id="more">This surge is attributed to the increasing penetration of the internet and digital services across the globe making more individuals and organizations vulnerable to cyber threats. Cybercrime encompasses a wide range of malicious activities, including identity theft, financial fraud, hacking, cyberstalking, and the distribution of harmful software,among others.</span>
+
+		</p>
+		<button onclick="myFunction()" id="myBtn">Read more</button>
+		<script>
+			function myFunction() {
+				var dots = document.getElementById('dots');
+				var moreText = document.getElementById('more');
+				var btnText = document.getElementById('myBtn');
+
+				if (dots.style.display === 'none') {
+					dots.style.display = 'inline';
+					btnText.innerHTML = 'Read more';
+					moreText.style.display = 'none';
 				} else {
-					document.getElementById('navbar').style.top = '-50px';
+					dots.style.display = 'none';
+					btnText.innerHTML = 'Read less';
+					moreText.style.display = 'inline';
 				}
 			}
-
-			document.querySelectorAll('#navbar a').forEach((anchor) => {
-				anchor.addEventListener('click', function (e) {
-					e.preventDefault();
-					document.querySelector(this.getAttribute('href')).scrollIntoView({
-						behavior: 'smooth',
-					});
-				});
-			});
 		</script>
-</head>
-<body>
-<u> <h1>CYBER CRIME</h1></u>
-<p>The digital age, while bringing unparalleled convenience and connectivity, has also seen a parallel and alarming rise in cybercrime. <span id="dots">...</span><span id="more">This surge is attributed to the increasing penetration of the internet and digital services across the globe, making more individuals and organizations vulnerable to cyber threats. Cybercrime encompasses a wide range of malicious activities, including identity theft, financial fraud, hacking, cyberstalking, and the distribution of harmful software, among others.</span></p>
-<button onclick="myFunction()" id="myBtn">Read more</button>
-<script>
-function myFunction() {
-    var dots = document.getElementById("dots");
-    var moreText = document.getElementById("more");
-    var btnText = document.getElementById("myBtn");
 
-    if (dots.style.display === "none") {
-    dots.style.display = "inline";
-    btnText.innerHTML = "Read more";
-    moreText.style.display = "none";
-    } else {
-    dots.style.display = "none";
-    btnText.innerHTML = "Read less";
-    moreText.style.display = "inline";
-    }
-}
-</script>
-
-</body>
+		<div class="nxtPage">
+			Many types of cybercrimes occured everyday, everytime, everywhere. We should a common knowedge about it. If we don't know about it then we cannot protect himself or our families or our friends. <a href="Types.html" alink="red" vlink="green">Click Here</a> to learn about types of Cybercrimes and it's awareness.
+		</div>
+	</body>
 </html>
