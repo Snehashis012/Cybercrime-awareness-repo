@@ -3,48 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Types of Cybercrimes</title>
     <style>
-        body{
-            background-color: black;
-            color: #fff;
-            padding: 10px;
-            font-family: 'Times New Roman', Times, serif;
+        .spelling-error{
+            text-decoration-line:underline;
+            text-decoration-style: wavy;
+            text-decoration-color: rgb(255, 145, 0);
         }
-        h4{
-            text-align: center;
-            font-size: 22px;
-            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-            color: cadetblue;
-        }
-        li{
-            display: list-item;
-            list-style-type:decimal;
-        }
-        .col{
-            color:aqua;
-        }
+    img{
+        height:100px;
+        width:100px;
+    }
+    body{
+        background-color: rgb(162, 0, 255);
+    }
+    button{
+        background-color:#965273;
+        margin-left: 50px;
+        border: 2px solid seagreen;
+        height: 200px;
+        width: 200px;
+        border-radius: 100px;
+        padding: 20px;
+        cursor: pointer;
+    }
+    button:hover{
+        background-color: cadetblue;
+    }
+    h2{
+        text-align: center;
+        margin-top: 10px;
+    }
+    p{
+        margin-bottom: 10px;
+    }
     </style>
+
+    
 </head>
 <body>
-    <h4>WOMEN RIGHTS</h4>   
-    Women's rights are human rights that all people are entitled to, including women and girls. These rights include:
-<ul><li>Physical integrity The right to be free from violence, slavery, and discrimination
-<li>Social rights: The right to be educated and participate in public life
-<li>Economic rights: The right to own property, work a job of choice, and be paid equally for it.
-<li>Political rights: The right to vote and hold public office 
-Despite the fact that women's rights are human rights, women and girls are often denied these rights around the world, especially because of their gender. Not a single country in the world has yet achieved gender justice.
-</li></ul>
-Here are some ways to register a complaint about crimes against woman in India:
-<ul></ul>
-<div class="col">
-    <font color="aqua">NCW Women Helpline Number: &nbsp;1600 5032 0909&nbsp;</font>
-<br>
-<font color="aqua">National Cyber Crime Portal: <a href="https://www.justiceforwoman.in">Click Here</a></font>
-</div>
-<br>
+    <u class ="spelling-error">
+    <h2>Types of cyber crime</h2></u>
+
+    <button onclick="run()"><font color="red">WOMAN RELATED CRIME</font><br>
+<img src="woman.jfif"></button>
+<button onclick="run2()"><font color="blue">CHILD RELATED CRIME<br></font><img src="child.jfif"></button>
+<button onclick="run3()"><font color="green">FINANCIAL FRAUD<br></font><img src="financialfraud.jfif"></button>
+<button onclick="run4()"><font color="brown">OTHER CYBER CRIME<br></font><img src="othersscam.jfif"></button>
+
+<script>
+    function run(){
+        window.location.href="Woman.html"
+    }
+
+    function run2(){
+        window.location.href="Child.html"
+    }
+
+    function run3(){
+        window.location.href="Financial.html"
+    }
+
+    function run4(){
+        window.location.href="Others.html"
+    }
+</script>
 </body>
 </html>
-
-
-<!-- Click Here - change color and also visit link color -->
