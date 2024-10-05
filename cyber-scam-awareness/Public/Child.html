@@ -1,52 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Child-related-awareness</title>
-		<style>
-			body {
-				background-color: rgb(255, 123, 0);
-			}
-			h4 {
-				text-align: center;
-				font-size: 20px;
-			}
-
-			.para{
-				color: rgb(28, 236, 108);
-			}
-			a{
-				margin-left: 300px;
-			}
-		</style>
-	</head>
-	<body>
-		<h4>Child Rights</h4>
-		<p>
-			Children's rights are fundamental human rights that include the right to:
-			<li>Protection: From violence, abuse, neglect, and exploitation</li>
-			<li>Education: To reach their full potential</li>
-			<li>Health: To access healthcare</li>
-			<li>Participation: To express opinions and be listened to</li>
-			<li>Development: To grow up in a safe, loving environment</li>
-			<li>Equality: To be free from discrimination</li>
-		</p>
-		The offenses committed against a person below 18 years of age are considered
-		crimes against children in India. Crimes against children can be physical,
-		sexual, or emotional and include murder, kidnapping, sexual exploitation,
-		abandonment, trafficking, etc.
-		<p>
-			
-		</p>
-		<div class="para">
-			Child Helpline Number:1500 3655 0707 <br>
-Against Child Crime Register here. <p></p>
-		</div>
-
-		
-		<!-- A hyperlink to goto back -->
-		
-		<a href="Types.html">Go to Previous Page -></a>
-	</body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Child-related Awareness</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .blur-card {
+            backdrop-filter: blur(10px);
+            background-color: rgba(255, 255, 255, 0.5); 
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-r from-orange-500 to-yellow-500 text-white">
+    <div class="container mx-auto py-10 text-center">
+        <h4 class="text-4xl font-bold underline mb-6">Child Rights</h4>
+        <div class="blur-card text-black rounded-lg shadow-lg p-6 mx-auto max-w-xl">
+            <ul class="list-disc pl-6 space-y-3">
+                <li>Protection from violence, abuse, neglect, and exploitation</li>
+                <li>Education to reach their full potential</li>
+                <li>Access to healthcare</li>
+                <li>Right to express opinions and be listened to</li>
+                <li>Development in a safe, loving environment</li>
+                <li>Equality to be free from discrimination</li>
+            </ul>
+        </div>
+        <p class="text-white mt-4 text-lg">Helpline Number: <span class="font-bold">1500 3655 0707</span></p>
+        <div class="mt-6 flex justify-center space-x-4">
+            <button class="bg-blue-600 hover:bg-blue-700 py-2 px-6 rounded-md font-semibold transition duration-200 shadow-lg transform hover:scale-105">
+                <a href="Types.html">Go Back to Cyber Crimes</a>
+            </button>
+            <button class="bg-gray-800 hover:bg-gray-900 py-2 px-6 rounded-md font-semibold transition duration-200 shadow-lg transform hover:scale-105">
+                <a href="index.html">Go to Home</a>
+            </button>
+        </div>
+    </div>
+</body>
 </html>
