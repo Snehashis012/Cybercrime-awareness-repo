@@ -3,42 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        .spelling-error{
-            text-decoration-line:underline;
-            text-decoration-style: wavy;
-            text-decoration-color: rgb(255, 145, 0);
-        }
-    img{
-        height:100px;
-        width:100px;
-    }
-    body{
-        background-color: rgb(162, 0, 255);
-    }
-    button{
-        background-color:#965273;
-    }
-    h2{
-        text-align: center;
-        margin-top: 10px;
-    }
-    p{
-        margin-bottom: 10px;
-    }
-    </style>
-
-    
+    <title>Types of Cyber Crime</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <p><u class ="spelling-error"></p>
-    <h2>Types of cyber crime</h2></u>
+<body class="bg-gradient-to-r from-purple-600 to-indigo-700 text-white">
+    <div class="container mx-auto text-center py-10">
+        <h2 class="text-5xl font-bold mb-8 underline">Types of Cyber Crime</h2>
 
-    <button><font color="red">WOMAN RELATED CRIME</font></p>
-<img src="woman.jfif"></button>
-<p><button><font color="blue">CHILD RELATED CRIME<br></font><img src="child.jfif"></button>
-</p><p><button><font color="green">FINANCIAL FRAUD<br></font><img src="financialfraud.jfif"></button>
-</p><button><font color="brown">OTHER CYBER CRIME<br></font><img src="othersscam.jfif"></button>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-8 justify-center">
+            <div class="bg-white bg-opacity-20 backdrop-blur-md rounded-lg shadow-lg px-12 py-6 transition-transform transform hover:scale-105">
+                <button class="bg-red-600 hover:bg-red-500 text-white py-2 px-6 rounded-md mt-4 w-full transition duration-300 ease-in-out shadow-lg">
+                    <a href="Woman.html">Woman Related Crime</a>
+                </button>
+                <img src="woman.jfif" alt="Woman Related Crime" class="mx-auto mt-4 rounded-lg shadow-md">
+            </div>
+            
+            <div class="bg-white bg-opacity-20 backdrop-blur-md rounded-lg shadow-lg px-12 py-6 transition-transform transform hover:scale-105">
+                <button class="bg-blue-600 hover:bg-blue-500 text-white py-2 px-6 rounded-md mt-4 w-full transition duration-300 ease-in-out shadow-lg">
+                    <a href="Child.html">Child Related Crime</a>
+                </button>
+                <img src="child.jfif" alt="Child Related Crime" class="mx-auto mt-4 rounded-lg shadow-md">
+            </div>
+            
+            <div class="bg-white bg-opacity-20 backdrop-blur-md rounded-lg shadow-lg px-12 py-6 transition-transform transform hover:scale-105">
+                <button class="bg-green-600 hover:bg-green-500 text-white py-2 px-6 rounded-md mt-4 w-full transition duration-300 ease-in-out shadow-lg">
+                    <a href="Financial.html">Financial Fraud</a>
+                </button>
+                <img src="financialfraud.jfif" alt="Financial Fraud" class="mx-auto mt-4 rounded-lg shadow-md">
+            </div>
+            
+            <div class="bg-white bg-opacity-20 backdrop-blur-md rounded-lg shadow-lg px-12 py-6 transition-transform transform hover:scale-105">
+                <button class="bg-yellow-600 hover:bg-yellow-500 text-white py-2 px-6 rounded-md mt-4 w-full transition duration-300 ease-in-out shadow-lg">
+                    <a href="Others.html">Other Cyber Crime</a>
+                </button>
+                <img src="othersscam.jfif" alt="Other Cyber Crime" class="mx-auto mt-4 rounded-lg shadow-md">
+            </div>
+        </div>
+
+        <button class="mt-8 bg-gray-800 hover:bg-gray-700 text-white py-2 px-4 rounded-md transition duration-300 ease-in-out">
+            <a href="index.html">Go to Home</a>
+        </button>
+    </div>
 </body>
 </html>

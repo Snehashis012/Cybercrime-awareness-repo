@@ -1,74 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Homepage</title>
-		<style>
-			body {
-				background-color: black;
-				color: #fff;
-				padding-left: 10px;
-				text-align: justify;
-			}
-			h1 {
-				text-align: center;
-				color: aqua;
-			}
-			#myBtn {
-				text-align: center;
-				background-color: cadetblue;
-				color: rgb(220, 50, 50);
-				padding: 5px;
-				border-radius: 10px;
-				cursor: pointer;
-			}
-			#myBtn:hover {
-				background-color: cornflowerblue;
-			}
-			
-			.nxtPage{
-				color:aliceblue;
-				margin-top: 50px;
-				text-align: justify;
-			}
-		</style>
-	</head>
-	<body>
-		<u> <h1>CYBER CRIME</h1></u>
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Homepage</title>
+	<script src="https://cdn.tailwindcss.com"></script>
+	<style>
+		@keyframes fadeIn {
+			0% { opacity: 0; transform: translateY(20px); }
+			100% { opacity: 1; transform: translateY(0); }
+		}
 
-		<!-- This is for fun-->
+		@keyframes glow {
+			0% { text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff0000, 0 0 40px #ff0000; }
+			50% { text-shadow: 0 0 20px #ff4500, 0 0 30px #ff4500, 0 0 40px #ff4500, 0 0 50px #ff4500; }
+			100% { text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff0000, 0 0 40px #ff0000; }
+		}
 
-		<marquee behavior="" direction="right" scrollamount="20"><h2>&#9760; Hackers around you!! &#9760;</h2></marquee>
+		.fade-in {
+			animation: fadeIn 0.5s forwards;
+		}
 
-		<p>
-			The digital age, while bringing unparalleled convenience and connectivity,
-			has also seen a parallel and alarming rise in cybercrime.
-			<span id="dots">...</span
-			><span id="more">This surge is attributed to the increasing penetration of the internet and digital services across the globe making more individuals and organizations vulnerable to cyber threats. Cybercrime encompasses a wide range of malicious activities, including identity theft, financial fraud, hacking, cyberstalking, and the distribution of harmful software,among others.</span>
+		.fade-out {
+			animation: fadeOut 0.5s forwards;
+		}
 
+		@keyframes fadeOut {
+			0% { opacity: 1; }
+			100% { opacity: 0; }
+		}
+	</style>
+</head>
+<body class="bg-gradient-to-r from-black via-gray-900 to-gray-800 text-white px-4 py-10">
+	<h1 class="text-5xl font-extrabold text-center text-cyan-400 mb-8 underline animate-fadeIn">
+		CYBER CRIME
+	</h1>
+
+	<marquee behavior="" direction="right" scrollamount="10" class="text-3xl font-semibold text-red-500 mb-6 animate-glow">
+		<h2>☠️ Hackers around you!! ☠️</h2>
+	</marquee>
+
+	<div class="bg-gray-800 rounded-lg shadow-lg p-6 mx-auto max-w-3xl animate-fadeIn" style="animation-delay: 0.5s; animation-fill-mode: both;">
+		<p class="text-lg leading-relaxed">
+			The digital age, while bringing unparalleled convenience and connectivity, has also seen a parallel and alarming rise in cybercrime.
+			<span id="dots">...</span>
+			<span id="more" class="hidden">This surge is attributed to the increasing penetration of the internet and digital services across the globe, making more individuals and organizations vulnerable to cyber threats. Cybercrime encompasses a wide range of malicious activities, including identity theft, financial fraud, hacking, cyberstalking, and the distribution of harmful software, among others.</span>
 		</p>
-		<button onclick="myFunction()" id="myBtn">Read more</button>
-		<script>
-			function myFunction() {
-				var dots = document.getElementById('dots');
-				var moreText = document.getElementById('more');
-				var btnText = document.getElementById('myBtn');
 
-				if (dots.style.display === 'none') {
-					dots.style.display = 'inline';
-					btnText.innerHTML = 'Read more';
-					moreText.style.display = 'none';
-				} else {
-					dots.style.display = 'none';
-					btnText.innerHTML = 'Read less';
-					moreText.style.display = 'inline';
-				}
+		<button id="myBtn" onclick="myFunction()" class="mt-4 bg-gradient-to-r from-cyan-400 to-cyan-600 text-black px-4 py-2 rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 ease-in-out">
+			Read more
+		</button>
+	</div>
+
+	<script>
+		function myFunction() {
+			var dots = document.getElementById('dots');
+			var moreText = document.getElementById('more');
+			var btnText = document.getElementById('myBtn');
+
+			if (dots.style.display === 'none') {
+				dots.style.display = 'inline';
+				btnText.innerHTML = 'Read more';
+				moreText.classList.remove('fade-in');
+				moreText.classList.add('fade-out');
+				setTimeout(() => {
+					moreText.classList.add('hidden');
+					moreText.classList.remove('fade-out');
+				}, 500); 
+			} else {
+				dots.style.display = 'none';
+				btnText.innerHTML = 'Read less';
+				moreText.classList.remove('hidden');
+				moreText.classList.add('fade-in');
+				setTimeout(() => {
+					moreText.classList.remove('fade-in');
+				}, 500); 
 			}
-		</script>
+		}
+	</script>
 
-		<div class="nxtPage">
-			Many types of cybercrimes occured everyday, everytime, everywhere. We should a common knowedge about it. If we don't know about it then we cannot protect himself or our families or our friends. <a href="Types.html" alink="red" vlink="green">Click Here</a> to learn about types of Cybercrimes and it's awareness.
-		</div>
-	</body>
+	<div class="mt-12 text-center animate-fadeIn" style="animation-delay: 1s;">
+		<p class="text-lg">
+			Many types of cybercrimes occur every day, everywhere. We should have a common knowledge about it. If we don't know about it, then we cannot protect ourselves, our families, or our friends.
+			<a href="Types.html" class="text-blue-400 underline hover:text-red-500 transition-colors duration-300 ease-in-out transform hover:scale-105">
+				Click Here
+			</a>
+			to learn about types of cybercrimes and how to be aware of them.
+		</p>
+	</div>
+</body>
 </html>
